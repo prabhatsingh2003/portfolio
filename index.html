@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prabhat Singh — Portfolio</title>
+  <meta name="description" content="Portfolio of Prabhat Singh — Web Developer" />
+  <style>
+    :root{
+      --bg:#0b0f12; /* dark background */
+      --card:#0f1720;
+      --muted:#9aa4af;
+      --accent:#7c3aed;
+      --glass: rgba(255,255,255,0.03);
+      --text:#e6eef6;
+      --success:#22c55e;
+      --danger:#ef4444;
+      --max-width:1100px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+    a{color:var(--accent);text-decoration:none}
+    .wrap{max-width:var(--max-width);margin:36px auto;padding:28px}
+
+    header{display:flex;gap:20px;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:16px;align-items:center}
+    .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,#18202b,#0f1720);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;color:var(--accent);box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+    .name{font-size:20px;font-weight:700}
+    .sub{color:var(--muted);font-size:13px}
+
+    nav{display:flex;gap:12px;align-items:center}
+    .btn{background:var(--glass);border:1px solid rgba(255,255,255,0.03);padding:10px 14px;border-radius:10px;color:var(--text);cursor:pointer;font-weight:600}
+    .btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+
+    main{display:grid;grid-template-columns:1fr 380px;gap:28px;margin-top:24px}
+
+    /* left column */
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:14px;padding:18px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+    .hero{display:flex;gap:18px}
+    .hero-left{flex:1}
+    h1{margin:0;font-size:28px}
+    .contacts{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+    .chip{display:flex;gap:8px;align-items:center;padding:8px 10px;background:rgba(255,255,255,0.02);border-radius:10px;font-size:13px;color:var(--muted)}
+
+    section{margin-top:18px}
+    section h2{margin:0 0 8px 0;font-size:16px}
+    p,li{color:var(--muted);line-height:1.5}
+    ul{padding-left:18px;margin:6px 0}
+
+    /* right column */
+    aside .profile-pic{width:100%;height:200px;border-radius:12px;background:linear-gradient(180deg,#0b1020,#081018);display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:700}
+    .skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+    .skill{padding:10px;border-radius:8px;background:rgba(255,255,255,0.02);text-align:center;font-weight:600}
+
+    .projects .project{padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border:1px solid rgba(255,255,255,0.02);margin-bottom:10px}
+    .project .meta{color:var(--muted);font-size:13px}
+
+    footer{margin-top:26px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* contact form */
+    form{display:grid;gap:10px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:var(--text);resize:vertical}
+    textarea{min-height:100px}
+
+    /* responsive */
+    @media (max-width:980px){main{grid-template-columns:1fr;}
+      aside{order:2}
+    }
+
+    /* subtle animations */
+    .fade-up{transform:translateY(6px);opacity:0;animation:up 600ms ease forwards}
+    @keyframes up{to{transform:none;opacity:1}}
+
+    /* small helpers */
+    .row{display:flex;gap:12px;align-items:center}
+    .muted{color:var(--muted)}
+    .tag{padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.02);font-weight:700}
+
+    /* resume link */
+    .resume-btn{display:inline-flex;gap:10px;align-items:center;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#4f46e5);color:white;font-weight:700;border:none}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">PS</div>
+        <div>
+          <div class="name">Prabhat Singh</div>
+          <div class="sub">Web Developer • MERN | Frontend • C</div>
+        </div>
+      </div>
+      <nav>
+        <a class="btn btn-outline" href="#projects">Projects</a>
+        <a class="btn btn-outline" href="#contact">Contact</a>
+        <a class="resume-btn" href="/resume/Prabhat_Singh_Resume.pdf" download>Download Resume</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- LEFT COLUMN -->
+      <div>
+        <div class="card hero fade-up">
+          <div class="hero-left">
+            <h1>PRABHAT SINGH</h1>
+            <div class="sub">Bachelor of Technology — Computer Science & Engineering</div>
+            <div class="contacts" style="margin-top:12px">
+              <div class="chip">📞 +91-8602307571</div>
+              <div class="chip">✉️ <a href="mailto:ps5701107@gmail.com" style="color:var(--muted)">ps5701107@gmail.com</a></div>
+              <div class="chip">GitHub: <a href="https://github.com/PrabhatSingh2003" target="_blank">PrabhatSingh2003</a></div>
+              <div class="chip">LinkedIn: <a href="https://linkedin.com/in/prabhat-singh-a11182234" target="_blank">prabhat-singh-a11182234</a></div>
+            </div>
+
+            <section id="objective">
+              <h2>Objective</h2>
+              <p>To get an opportunity where I can make the best of my potential and contribute to the organization's growth. Seeking a position in a company where I can launch my career, upgrade my skills with time and take the company to the next level.</p>
+            </section>
+
+            <section id="education">
+              <h2>Education</h2>
+              <ul>
+                <li><strong>AKS University, Satna</strong> — B.Tech (Computer Science & Engineering), 2020–2024. CGPA: 6.87</li>
+                <li><strong>Adarsh Higher Secondary School, Rampur Baghelan</strong> — XII, 2020. Madhya Pradesh Board — 80% (Maths + Biology)</li>
+                <li><strong>Adarsh Higher Secondary School, Rampur Baghelan</strong> — X, 2018. Madhya Pradesh Board — 91.5%</li>
+              </ul>
+            </section>
+
+            <section id="internship">
+              <h2>Internship</h2>
+              <p><strong>Web Developer</strong> — ROSTRIC INFOTECH, Bangalore (01-01-2024 to 30-04-2024)</p>
+              <p class="muted">Collaborated with designers and developers to build responsive, accessible, and mobile-friendly websites. Focused on usability and performance optimizations.</p>
+            </section>
+
+            <section id="projects" class="projects">
+              <h2>Personal Projects</h2>
+
+              <div class="project">
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                  <strong>College Administration</strong>
+                  <span class="tag">HTML • CSS • JavaScript</span>
+                </div>
+                <div class="meta">Facilitates user and admin logins using live-detection techniques for enhanced security.</div>
+                <p class="muted">Built secure login flows with client-side validation and face/live detection integration for authentication checks.</p>
+              </div>
+
+              <div class="project">
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                  <strong>E-COMMERCE Shopping Website</strong>
+                  <span class="tag">MERN</span>
+                </div>
+                <div class="meta">A full-stack e-commerce application with product management, user management and cart orders for shoppers and admins.</div>
+                <p class="muted">Admin features: add products, set prices, delete users. Shopper features: browse products, add to cart, checkout flow (demo).</p>
+              </div>
+
+              <div class="project">
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                  <strong>Bank Management (Console)</strong>
+                  <span class="tag">C</span>
+                </div>
+                <div class="meta">Console-based banking platform with operations like deposit, withdraw and transfer money.</div>
+                <p class="muted">Developed using C. Focused on secure transactions and simple menu-driven UI for learning core CS topics.</p>
+              </div>
+            </section>
+
+            <section id="skills">
+              <h2>Technical Skills</h2>
+              <div class="skill-grid">
+                <div class="skill">C</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">C# (basic)</div>
+                <div class="skill">HTML & CSS</div>
+                <div class="skill">React</div>
+                <div class="skill">Node.js</div>
+                <div class="skill">Express</div>
+                <div class="skill">MongoDB</div>
+                <div class="skill">SQL</div>
+              </div>
+            </section>
+
+            <section id="certifications">
+              <h2>Certifications & Workshops</h2>
+              <ul>
+                <li>Deloitte Australia — Technology Job Simulation on Forage (Coding Development)</li>
+                <li>Virtual Lab Workshop — IIT Delhi</li>
+                <li>Core Java — CodeChef</li>
+                <li>HTML — KG Coding</li>
+                <li>Java & OOPS — Crio.Do</li>
+                <li>System Administration — Red Hat</li>
+              </ul>
+            </section>
+
+            <section id="achievements">
+              <h2>Achievements</h2>
+              <ul>
+                <li>3-Star on HackerRank</li>
+                <li>2-Star on CodeChef (Rating: 1443)</li>
+                <li>Solved 200+ problems on CodeChef</li>
+              </ul>
+            </section>
+
+            <section id="hobbies">
+              <h2>Interests & Hobbies</h2>
+              <p>Coding, Playing Cricket</p>
+            </section>
+
+          </div>
+        </div>
+
+        <!-- CONTACT CARD -->
+        <div class="card fade-up" style="margin-top:14px" id="contact">
+          <h2>Contact Me</h2>
+          <p class="muted">Send me a message — I usually reply within a day.</p>
+          <form id="contactForm">
+            <input id="name" type="text" placeholder="Your name" required />
+            <input id="email" type="email" placeholder="Your email" required />
+            <textarea id="message" placeholder="Your message" required></textarea>
+            <div style="display:flex;gap:10px">
+              <button type="submit" class="btn">Send via Mail</button>
+              <a class="btn btn-outline" href="mailto:ps5701107@gmail.com">Open Email</a>
+            </div>
+            <p id="formStatus" class="muted" style="margin:6px 0 0 0"></p>
+          </form>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <aside>
+        <div class="card fade-up">
+          <div class="profile-pic">Profile Photo
+            <!-- Replace this block with an <img> tag if you provide a photo -->
+          </div>
+
+          <section style="margin-top:12px">
+            <h2>Quick Info</h2>
+            <p class="muted">Location: Satna, Madhya Pradesh, India</p>
+            <p class="muted">Open to full-time roles and internships</p>
+          </section>
+
+          <section style="margin-top:12px">
+            <h2>Tools & Platforms</h2>
+            <div class="skill-grid" style="grid-template-columns:repeat(1,1fr);">
+              <div class="skill">VS Code</div>
+              <div class="skill">Git & GitHub</div>
+              <div class="skill">Chrome DevTools</div>
+              <div class="skill">Postman</div>
+            </div>
+          </section>
+
+          <section style="margin-top:12px">
+            <h2>Stats</h2>
+            <p class="muted">HackerRank: 3★ • CodeChef: 2★ (1443) • 200+ problems solved</p>
+          </section>
+
+        </div>
+
+        <div style="height:18px"></div>
+
+        <div class="card fade-up">
+          <h2>Availability</h2>
+          <p class="muted">Immediately available for internships or entry-level roles.</p>
+          <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn" href="tel:+918602307571">Call</a>
+            <a class="btn btn-outline" href="mailto:ps5701107@gmail.com">Email</a>
+            <a class="btn btn-outline" href="https://github.com/PrabhatSingh2003" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </aside>
+
+    </main>
+
+    <footer>
+      <div class="muted">© "Prabhat Singh" — Built with HTML • CSS • JavaScript</div>
+    </footer>
+  </div>
+
+  <script>
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const id = a.getAttribute('href');
+        if(id === '#') return;
+        const el = document.querySelector(id);
+        if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+      });
+    });
+
+    // Simple contact form: will open mail client with prefilled fields
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('formStatus');
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if(!name || !email || !message){
+        status.textContent = 'Please fill all fields.';return;
+      }
+      const subject = encodeURIComponent('Portfolio contact from ' + name);
+      const body = encodeURIComponent('Name: '+name+'\nEmail: '+email+'\n\n'+message);
+      window.location.href = `mailto:ps5701107@gmail.com?subject=${subject}&body=${body}`;
+      status.textContent = 'Opening email client...';
+    });
+  </script>
+</body>
+</html>
